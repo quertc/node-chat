@@ -1,5 +1,6 @@
-# Object file
-*.o
+# Logs
+logs
+*.log
 
-# Ada Library Information
-*.ali
+# Node Dependencies
+node_modules
