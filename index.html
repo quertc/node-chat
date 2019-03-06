@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>app</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- main -->
+
+  <div class="container">
+    <div class="py-5 text-center">
+      <h2>Chat</h2>
+      <p class="lead">Enter your name and start writing</p>
+    </div>
+    <div class="row">
+      <div class="col-6">
+
+        <form id="messForm">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name" class="form-control" required> 
+          <br>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" class="form-control" placeholder="Enter your message" maxlength="960" required></textarea>
+          <br>
+          <input type="submit" value="Send message" class="btn btn-outline-info">
+        </form>
+      </div>
+      <div class="col-6">
+
+        <div id="all_mess"></div>
+      </div>
+    </div>
+  </div>
+
+	<script src="/socket.io/socket.io.js"></script>
+
+  <script>
+    
+		let min = 1;
+		let max = 7;
+    let random = Math.floor(Math.random() * (max - min)) + min;
+
+		let alertClass;
+		switch (random) {
+			case 1:
+				alertClass = 'secondary';
+				break;
+			case 2:
+				alertClass = 'danger';
+				break;
+			case 3:
+				alertClass = 'success';
+				break;
+			case 4:
+				alertClass = 'warning';
+				break;
+			case 5:
+				alertClass = 'info';
+				break;
+      case 6:
+				alertClass = 'primary';
+			  break;
+      case 7:
+				alertClass = 'dark';
+				break;
+		}
+    
+    window.onload = () => {
+      let socket = io.connect();
+      let form = document.querySelector('#messForm');
+      let name = document.querySelector('#name');
+      let textarea = document.querySelector('#message');
+      let all_messages = document.querySelector('#all_mess');
+
+			form.onsubmit = (e) => {
+				e.preventDefault();
+				socket.emit('send mess', {mess: textarea.value, name: name.value, className: alertClass});
+        name.setAttribute('readonly', true);
+				textarea.value = '';
+			};
+
+			socket.on('add mess', (data) => {
+        let div = document.createElement('div');
+        div.className = `alert alert-${data.className}`;
+        div.style.wordBreak = 'break-all'
+        div.innerHTML = `<b>${data.name}</b>: ${data.mess}`;
+				all_messages.append(div)
+			});
+
+    };
+
+  </script>
+</body>
+</html>

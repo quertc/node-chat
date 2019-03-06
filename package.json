@@ -1,0 +1,15 @@
+{
+  "name": "node-chat",
+  "version": "1.0.0",
+  "description": "Chat is done on the node.js, express and socket.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Artem Shkatov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
