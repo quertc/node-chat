@@ -1,6 +1,6 @@
 # Simple low-functional chat on node.js, express and socket.io
 
-![Screenshot](https://github.com/quertc/socket.io/master/public/image/image.png)
+![Screenshot](https://github.com/quertc/socket.io/master/public/image/image.PNG)
 
 ## Installation
 Make sure you have a [Node.js](https://nodejs.org/), [npm](https://www.npmjs.com/) and [git](https://git-scm.com).
