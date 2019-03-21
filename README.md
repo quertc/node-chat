@@ -3,7 +3,7 @@
 ![Screenshot](https://github.com/quertc/socket.io/blob/master/public/image/img.PNG)
 
 ## Installation
-Make sure you have a [Node.js](https://nodejs.org/), [npm](https://www.npmjs.com/) and [git](https://git-scm.com).
+> Make sure you have a [Node.js](https://nodejs.org/), [npm](https://www.npmjs.com/) and [git](https://git-scm.com).
 
 1. Download or clone the repository
 
