@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Artem Shkatov",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
