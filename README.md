@@ -1,6 +1,6 @@
 # Simple low-functional chat on node.js, express and socket.io
 
-![Screenshot](https://github.com/quertc/socket.io/blob/master/public/image/img.PNG)
+![Screenshot](https://github.com/quertc/node-chat/blob/master/public/image/img.PNG)
 
 ## Installation
 > Make sure you have a [Node.js](https://nodejs.org/), [npm](https://www.npmjs.com/) and [git](https://git-scm.com).
@@ -8,8 +8,8 @@
 1. Download or clone the repository
 
 	```
-	$ git clone https://github.com/quertc/socket.io.git
-	$ cd socket.io
+	$ git clone https://github.com/quertc/node-chat.git
+	$ cd node-chat
 	```
 2. Install Dependencies
 
