@@ -65,7 +65,7 @@
       case 7:
 				alertClass = 'dark';
 				break;
-		}
+		};
     
     window.onload = () => {
       let socket = io.connect();
@@ -84,9 +84,9 @@
 			socket.on('add mess', (data) => {
         let div = document.createElement('div');
         div.className = `alert alert-${data.className}`;
-        div.style.wordBreak = 'break-all'
+        div.style.wordBreak = 'break-all';
         div.innerHTML = `<b>${data.name}</b>: ${data.mess}`;
-				all_messages.append(div)
+				all_messages.append(div);
 			});
 
     };
