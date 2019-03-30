@@ -8,18 +8,18 @@
 1. Download or clone the repository
 
 	```
-	$ git clone https://github.com/quertc/node-chat.git
-	$ cd node-chat
+	git clone https://github.com/quertc/node-chat.git
+	cd node-chat
 	```
 2. Install Dependencies
 
 	```
-	$ npm i
+	npm i
 	```
 3. Run the app
 
 	```
-	$ npm start
+	npm start
 	```
 
 After all these steps, you can run the application on [localhost:3000](http://localhost:3000/)
