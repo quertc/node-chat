@@ -1,4 +1,4 @@
-# Simple low-functional chat on node.js, express and socket.io
+# Simple chat on node.js, express and socket.io
 
 ![Screenshot](https://github.com/quertc/node-chat/blob/master/public/image/img.PNG)
 
