@@ -18,7 +18,7 @@ io.sockets.on('connection', (socket) => {
     console.info('Пользователь отключен');
   });
 
-	socket.on('send mess', (data) => {
-		io.sockets.emit('add mess', {mess: data.mess, name: data.name, className: data.className});
-	});
+  socket.on('send mess', (data) => {
+    io.sockets.emit('add mess', {mess: data.mess, name: data.name, className: data.className});
+  });
 });
