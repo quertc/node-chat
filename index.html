@@ -38,36 +38,35 @@
 	<script src="/socket.io/socket.io.js"></script>
 
   <script>
-    
-		let min = 1;
-		let max = 7;
+    let min = 1;
+    let max = 7;
     let random = Math.floor(Math.random() * (max - min)) + min;
 
-		let alertClass;
-		switch (random) {
-			case 1:
-				alertClass = 'secondary';
-				break;
-			case 2:
-				alertClass = 'danger';
-				break;
-			case 3:
-				alertClass = 'success';
-				break;
-			case 4:
-				alertClass = 'warning';
-				break;
-			case 5:
-				alertClass = 'info';
-				break;
+    let alertClass;
+    switch (random) {
+      case 1:
+        alertClass = 'secondary';
+        break;
+      case 2:
+        alertClass = 'danger';
+        break;
+      case 3:
+        alertClass = 'success';
+        break;
+      case 4:
+        alertClass = 'warning';
+        break;
+      case 5:
+        alertClass = 'info';
+        break;
       case 6:
-				alertClass = 'primary';
-			  break;
+        alertClass = 'primary';
+        break;
       case 7:
-				alertClass = 'dark';
-				break;
-		};
-    
+        alertClass = 'dark';
+        break;
+    };
+
     window.onload = () => {
       let socket = io.connect();
       let form = document.querySelector('#messForm');
@@ -75,23 +74,22 @@
       let textarea = document.querySelector('#message');
       let all_messages = document.querySelector('#all_mess');
 
-			form.onsubmit = (e) => {
-				e.preventDefault();
-				socket.emit('send mess', {mess: textarea.value, name: name.value, className: alertClass});
+      form.onsubmit = (e) => {
+        e.preventDefault();
+        socket.emit('send mess', {mess: textarea.value, name: name.value, className: alertClass});
         name.setAttribute('readonly', true);
-				textarea.value = '';
-			};
+        textarea.value = '';
+      };
 
-			socket.on('add mess', (data) => {
+      socket.on('add mess', (data) => {
         let div = document.createElement('div');
         div.className = `alert alert-${data.className}`;
         div.style.wordBreak = 'break-all';
         div.innerHTML = `<b>${data.name}</b>: ${data.mess}`;
-				all_messages.append(div);
-			});
+        all_messages.append(div);
+      });
 
     };
-
   </script>
 </body>
 </html>
