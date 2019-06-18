@@ -19,7 +19,7 @@
 3. Run the app
 
 	```
-	npm start
+	npm run start
 	```
 
 After all these steps, you can run the application on [localhost:3000](http://localhost:3000/)
