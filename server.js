@@ -1,3 +1,5 @@
+'use strict';
+
 let express = require('express');
 let app = express();
 let server = require('http').Server(app).listen(3000);
