@@ -72,14 +72,14 @@
       let textarea = document.querySelector('#message');
       let all_messages = document.querySelector('#all_mess');
 
-      form.onsubmit = (e) => {
+      form.onsubmit = e => {
         e.preventDefault();
         socket.emit('send mess', {mess: textarea.value, name: name.value, className: alertClass});
         name.setAttribute('readonly', true);
         textarea.value = '';
       };
 
-      socket.on('add mess', (data) => {
+      socket.on('add mess', data => {
         let div = document.createElement('div');
         div.className = `alert alert-${data.className}`;
         div.style.wordBreak = 'break-all';

@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
 let connections = [];
 
-io.sockets.on('connection', (socket) => {
+io.sockets.on('connection', socket => {
   connections.push(socket);
   console.info(`Пользователь ${connections.indexOf(socket) + 1} подключен`);
 
@@ -20,7 +20,7 @@ io.sockets.on('connection', (socket) => {
     console.info('Пользователь отключен');
   });
 
-  socket.on('send mess', (data) => {
+  socket.on('send mess', data => {
     io.sockets.emit('add mess', {mess: data.mess, name: data.name, className: data.className});
   });
 });
