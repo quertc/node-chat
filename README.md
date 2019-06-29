@@ -11,4 +11,4 @@ npm install
 npm run start
 ```
 
-After that, you can test the applcation on [localhost:3000](http://localhost:3000/)
+After that, you can test the application on [localhost:3000](http://localhost:3000/)
