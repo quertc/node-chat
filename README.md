@@ -2,24 +2,13 @@
 
 ![Screenshot](https://github.com/quertc/node-chat/blob/master/public/image/img.PNG)
 
-## Installation
+### Installing
 > Make sure you have a [Node.js](https://nodejs.org/), [npm](https://www.npmjs.com/) and [git](https://git-scm.com).
 
-1. Download or clone the repository
+Download or clone the repository and run
+```
+npm install
+npm run start
+```
 
-	```
-	git clone https://github.com/quertc/node-chat.git
-	cd node-chat
-	```
-2. Install Dependencies
-
-	```
-	npm i
-	```
-3. Run the app
-
-	```
-	npm run start
-	```
-
-After all these steps, you can run the application on [localhost:3000](http://localhost:3000/)
+After that, you can test the applcation on [localhost:3000](http://localhost:3000/)
