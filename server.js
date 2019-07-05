@@ -13,11 +13,11 @@ let connections = [];
 
 io.sockets.on('connection', socket => {
   connections.push(socket);
-  console.info(`Пользователь ${connections.indexOf(socket) + 1} подключен`);
+  console.info(`User ${connections.indexOf(socket) + 1} connected`);
 
   socket.on('disconnect', () => {
     connections.splice(connections.indexOf(socket), 1);
-    console.info('Пользователь отключен');
+    console.info('User disconnected');
   });
 
   socket.on('send mess', data => {
