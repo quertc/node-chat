@@ -1,6 +1,6 @@
 # Simple chat
 
-![Screenshot](https://github.com/quertc/node-chat/blob/master/preview.PNG)
+![Screenshot](https://github.com/quertc/node-chat/blob/master/preview.png)
 
 ## Description
 
