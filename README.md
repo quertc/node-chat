@@ -1,14 +1,24 @@
 # Simple chat
-![Screenshot](https://github.com/quertc/node-chat/blob/master/public/image/img.PNG)
+
+![Screenshot](https://github.com/quertc/node-chat/blob/master/preview.PNG)
 
 ## Description
-This small application is built using node.js, express and socket.io.
+
+This small application is built with node.js, express and socket.io. It also uses ESLint to analyze the code for errors.
 
 ### Installing
-Download or clone the repository and run
+
+Download or clone the repository and run:
+
+```cmd
+npm i
+npm start
 ```
-npm install
-npm run start
+
+Or development mode with the application automatically restarting when changes are detected in files:
+
+```cmd
+npm run dev
 ```
 
 _After that, the application will be available at [localhost:3000](http://localhost:3000/)._
