@@ -64,7 +64,7 @@
           alertClass = 'primary';
       }
 
-      window.onload = () => {
+      document.addEventListener('DOMContentLoaded', () => {
         const socket = io.connect();
         const form = document.querySelector('.form');
         const name = document.querySelector('#name');
@@ -84,7 +84,7 @@
           div.innerHTML = `<b>${data.name}</b>: ${data.message}`;
           allMessages.append(div);
         });
-      };
+      });
     </script>
   </body>
 </html>
