@@ -1,4 +1,4 @@
-# Simple chat
+# Simple web chat
 
 ![Screenshot](https://github.com/quertc/node-chat/blob/master/preview.png)
 
