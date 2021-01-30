@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 const server = require('http').Server(app).listen(3000);
-const io = require('socket.io').listen(server);
+const io = require('socket.io')(server);
 
 app.use('/favicon.ico', express.static('favicon.ico'));
 
